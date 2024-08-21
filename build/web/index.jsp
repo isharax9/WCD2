@@ -3,6 +3,7 @@
     Created on : Aug 21, 2024, 8:52:06 AM
     Author     : isharaLakshitha
 --%>
+<%@page import="java.util.Date"%>
 <%@taglib prefix="fm" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,9 +13,12 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Home</h1>
 
-        <fm:formatNumber value="10.528" type="currency" currencyCode="LKR" var="x" scope="session"></fm:formatNumber>
+        <% Date d = new Date();
+            session.setAttribute("d", d);
+        %>
+        <fm:formatDate value="${sessionScope.d}" type="date" pattern="yyyy-MM-dd" var="x" scope="session"></fm:formatDate>
         ${sessionScope.x}
     </body>
 </html>
