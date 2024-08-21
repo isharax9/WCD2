@@ -18,7 +18,7 @@
         <% Date d = new Date();
             session.setAttribute("d", d);
         %>
-        <fm:formatDate value="${sessionScope.d}" type="date" pattern="yyyy-MM-dd" var="x" scope="session"></fm:formatDate>
+        <fm:formatDate value="${sessionScope.d}" type="time" pattern="hh:mm:ss a" var="x" scope="session"></fm:formatDate>
         ${sessionScope.x}
     </body>
 </html>
