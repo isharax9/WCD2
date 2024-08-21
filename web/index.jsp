@@ -14,7 +14,7 @@
     <body>
         <h1>Hello World!</h1>
 
-        <fm:formatNumber value="10.528" pattern="#.##" var="x" scope="session"></fm:formatNumber>
+        <fm:formatNumber value="10.528" pattern="0.0000" var="x" scope="session"></fm:formatNumber>
         ${sessionScope.x}
     </body>
 </html>
