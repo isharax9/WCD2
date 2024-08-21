@@ -3,7 +3,6 @@
     Created on : Aug 21, 2024, 8:52:06 AM
     Author     : isharaLakshitha
 --%>
-<%@page import="java.util.Date"%>
 <%@taglib prefix="fm" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -15,10 +14,7 @@
     <body>
         <h1>Home</h1>
 
-        <% Date d = new Date();
-            session.setAttribute("d", d);
-        %>
-        <fm:formatDate value="${sessionScope.d}" type="both" pattern="yyyy-MM-dd hh:mm:ss a" var="x" scope="session"></fm:formatDate>
-        ${sessionScope.x}
+        <fm:parseDate value="2024-08-29" pattern="yyyy-MM-dd" var="d" scope="request"></fm:parseDate>
+        ${requestScope.d}
     </body>
 </html>
