@@ -13,7 +13,8 @@
     </head>
     <body>
         <h1>Custom Tag Libraries (CTL)</h1>
-        <c:cutomPrint/>
+        
+        <h2><c:cutomPrint/></h2>
 
     </body>
 </html>

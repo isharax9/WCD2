@@ -6,6 +6,7 @@
 package model;
 
 import java.io.IOException;
+import javax.servlet.jsp.JspContext;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 
@@ -17,7 +18,8 @@ public class CTL1 extends SimpleTagSupport{
 
     @Override
     public void doTag() throws JspException, IOException {
-        System.out.println("Hello");
+        JspContext context = getJspContext();
+        context.getOut().write("Hello");
     }
     
 }
