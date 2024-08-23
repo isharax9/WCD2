@@ -16,8 +16,10 @@
         <h1>Custom Tag Libraries (CTL)</h1>
         
         
-        <core:out value="Hi2"/>
-        <h2><c:cutomPrint value="Hello"/></h2>
+        <c:if test="true">
+            <button>Log out</button>
+        </c:if>
 
     </body>
 </html>
+   

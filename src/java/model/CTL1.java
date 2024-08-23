@@ -1,7 +1,6 @@
 package model;
 
 import java.io.IOException;
-import javax.servlet.jsp.JspContext;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 
@@ -10,24 +9,26 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
  * @author isharaLakshitha
  */
 public class CTL1 extends SimpleTagSupport {
-    
-    private String value;
 
-    public void setValue(String value){
-        this.value = value;
+    private String test;
+
+    public void setTest(String test) {
+        this.test = test;
     }
-    
-    
-    public String getvalue() {
-        return value;
+
+    public String getTest() {
+        return test;
     }
-    
+
     @Override
     public void doTag() throws JspException, IOException {
-        JspContext context = getJspContext();
-        context.getOut().write(getvalue());
+        try {
+            boolean b = Boolean.parseBoolean(test);
+            if (b) {
+                getJspBody().invoke(getJspContext().getOut());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-
-    
-
 }

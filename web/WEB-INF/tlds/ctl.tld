@@ -4,12 +4,12 @@
   <short-name>ctl</short-name>
   <uri>/WEB-INF/tlds/ctl</uri>
   <tag>
-      <name>cutomPrint</name>
+      <name>if</name>
       <tag-class>model.CTL1</tag-class>
-      <body-content>empty</body-content>
+      <body-content>scriptless</body-content>
       
       <attribute>
-          <name>value</name>
+          <name>test</name>
           <required>true</required>
           <type>java.lang.String</type>
       </attribute>
