@@ -4,6 +4,7 @@
     Author     : isharaLakshitha
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="core" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="c" uri="/WEB-INF/tlds/ctl" %>
 <!DOCTYPE html>
 <html>
@@ -14,7 +15,9 @@
     <body>
         <h1>Custom Tag Libraries (CTL)</h1>
         
-        <h2><c:cutomPrint/></h2>
+        
+        <core:out value="Hi2"/>
+        <h2><c:cutomPrint value="Hello"/></h2>
 
     </body>
 </html>

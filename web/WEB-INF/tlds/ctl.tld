@@ -7,5 +7,12 @@
       <name>cutomPrint</name>
       <tag-class>model.CTL1</tag-class>
       <body-content>empty</body-content>
+      
+      <attribute>
+          <name>value</name>
+          <required>true</required>
+          <type>java.lang.String</type>
+      </attribute>
+      
   </tag>
 </taglib>
