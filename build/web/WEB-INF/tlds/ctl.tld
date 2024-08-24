@@ -4,26 +4,20 @@
     <short-name>ctl</short-name>
     <uri>/WEB-INF/tlds/ctl</uri>
     <tag>
-        <name>set</name>
-        <tag-class>model.CTL1</tag-class>
-        <body-content>empty</body-content>
-      
+        <name>user</name>
+        <tag-class>model.UserTag</tag-class>
+        <body-content>scriptless</body-content>
+        
         <attribute>
-            <name>var</name>
+            <name>id</name>
             <type>java.lang.String</type>
             <required>true</required>
         </attribute>
-
-        <attribute>
-            <name>value</name>
-            <type>java.lang.Object</type>
-            <required>true</required>
-        </attribute>
-      
-        <attribute>
-            <name>scope</name>
-            <type>java.lang.String</type>
-            <required>false</required>
-        </attribute>
+    </tag>
+    
+    <tag>
+        <name>name</name>
+        <body-content>scriptless</body-content>
+        <tag-class>model.NameTag</tag-class>
     </tag>
 </taglib>

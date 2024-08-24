@@ -14,20 +14,24 @@
     </head>
     <body>
         <h1>Custom Tag Libraries (CTL)</h1>
-        
-        
-        <c:set var="a" value="10"/>
-        <c:set var="b" value="20" scope="page"/>
-        <c:set var="c" value="30" scope="request"/>
-        <c:set var="d" value="40" scope="session"/>
-        <c:set var="e" value="50" scope="application"/>
-        
-        ${pageScope.a}
-        ${pageScope.b}
-        ${requestScope.c}
-        ${sessionScope.d}
-        ${applicationScope.e}
+
+        <c:user id="1">
+            <c:name>Sahan</c:name>
+        </c:user>
+
+        <c:user id="2">
+            <c:name>Kasun</c:name>
+        </c:user> 
+
+        <c:user id="4">
+            <c:name>Ishara</c:name>
+        </c:user>
+
+
+
+        <h2>${applicationScope.user1.name}</h2>
+        <h2>${applicationScope.user2.name}</h2>
+        <h2>${applicationScope.user4.name}</h2>
 
     </body>
 </html>
-   
